@@ -1,7 +1,4 @@
-import wikipedia
-wikipedia.set_user_agent("Video Game Research Assistant (Jaredfrench64@Gmail.com)")
-from langchain_community.tools import WikipediaQueryRun, DuckDuckGoSearchRun
-from langchain_community.utilities import WikipediaAPIWrapper
+from langchain_community.tools import DuckDuckGoSearchRun
 from langchain.tools import tool
 from datetime import datetime
 
@@ -14,9 +11,6 @@ def search_tool(query: str) -> str:
     """
     search.run
     return query
-
-api_wrapper = WikipediaAPIWrapper(top_k_results=1, doc_content_chars_max=1000)
-wiki_tool = WikipediaQueryRun(api_wrapper=api_wrapper)
 
 @tool
 def save_to_txt(data: str, filename: str = "Video Game Overview.txt"):

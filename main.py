@@ -2,7 +2,7 @@ from dotenv import load_dotenv
 from pydantic import BaseModel
 from langchain_anthropic import ChatAnthropic
 from langchain.agents import create_agent
-from tools import search_tool, save_to_txt, wiki_tool
+from tools import search_tool, save_to_txt
 
 load_dotenv()
 
@@ -19,10 +19,10 @@ You are a video game research assistant.
 Based off the given video game, research everything you can about it, ratings, reviews, estimated time to beat, difficulty, genre, and more.
 Summarize the 3 best reviews you can find.
 Give a brief overview of the video game itself, and list everything in a clear and concise format.
-Always save the output to a text file.
+Save the output to a text file when told to do so.
 """
 
-tools = [search_tool, save_to_txt, wiki_tool]
+tools = [search_tool, save_to_txt]
 
 agent = create_agent(
     model=llm,
