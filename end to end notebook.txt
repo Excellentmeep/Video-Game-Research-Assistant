@@ -1,0 +1,7 @@
+A research agent seemed to be a nice first NLP project, and I know a lot about video games so it made sense.
+
+First learned how to use langchain to create python agents, got a working prototype.
+
+Then got everything onto github and polished everything up with git, fixed bugs, made it more reliable, etc.
+
+Finally, learned how to use streamlit to create a fully functional demo of the agent.
